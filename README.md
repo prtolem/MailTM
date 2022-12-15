@@ -1,2 +1,1 @@
-# MailTM
-simple wrapped for mail.tm 
+API wrapper for https://docs.mail.tm/
