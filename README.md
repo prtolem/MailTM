@@ -32,7 +32,7 @@ from mailtm import MailTM
 
 def main() -> None:
     mailtm = MailTM()
-    result = mailtm.get_account_token(address="example", password="example")
+    result = await mailtm.get_account_token(address="example", password="example")
     print(result)
 
 
@@ -57,7 +57,7 @@ Returns token and id after successful authorization.
 
 ### Get domains list
 ```python 
-get_domains()
+await get_domains()
 ```
 
 | Description             |
@@ -68,7 +68,7 @@ Returns a list of domains.
 
 ### Get domain by id
 ```python 
-get_domain(domain_id)
+await get_domain(domain_id)
 ```
 
 | Parameter    | Type     | Description                         |
@@ -79,7 +79,7 @@ Returns a domain by its id (Useful for deleted/private domains).
 
 ### Get account
 ```python 
-get_account(address, password)
+await get_account(address, password)
 ```
 
 | Parameter   | Type     | Description                                  |
@@ -91,7 +91,7 @@ Creates an Account resource (Registration).
 
 ### Get account by id
 ```python 
-get_account_by_id(account_id, token)
+await get_account_by_id(account_id, token)
 ```
 
 | Parameter    | Type     | Description                                  |
@@ -103,7 +103,7 @@ Get an Account resource by its id (Obviously, the Bearer token needs to be the o
 
 ### Delete account by id
 ```python 
-delete_account_by_id(account_id, token)
+await delete_account_by_id(account_id, token)
 ```
 
 | Parameter    | Type     | Description                          |
@@ -115,7 +115,7 @@ Deletes the Account resource.
 
 ### Get me
 ```python 
-get_me(token)
+await get_me(token)
 ```
 
 | Parameter  | Type     | Description     |
@@ -126,7 +126,7 @@ Returns the Account resource that matches the Bearer token that sent the request
 
 ### Get messages
 ```python 
-get_messages(token, page)
+await get_messages(token, page)
 ```
 
 | Parameter | Type     | Description                |
@@ -138,7 +138,7 @@ Returns all the Message resources of a given page.
 
 ### Get message by id
 ```python 
-get_message_by_id(message_id, token)
+await get_message_by_id(message_id, token)
 ```
 
 | Parameter     | Type       | Description                         |
@@ -150,7 +150,7 @@ Retrieves a Message resource with a specific id.
 
 ### Delete message by id
 ```python 
-delete_message_by_id(message_id, token)
+await delete_message_by_id(message_id, token)
 ```
 
 | Parameter     | Type       | Description                         |
@@ -162,7 +162,7 @@ Deletes the Message resource.
 
 ### Set read message by id
 ```python 
-set_read_message_by_id(message_id, token)
+await set_read_message_by_id(message_id, token)
 ```
 
 | Parameter     | Type       | Description                        |
@@ -174,7 +174,7 @@ Marks a Message resource as read.
 
 ### Get message source by id
 ```python 
-get_message_source_by_id(message_id, token)
+await get_message_source_by_id(message_id, token)
 ```
 
 | Parameter     | Type       | Description                       |
