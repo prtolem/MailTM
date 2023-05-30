@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "MailTMAPI"
+version = "1.0.0"
+authors = [
+  { name="prtolem", email="coder@derkown.ru" },
+]
+description = "Python API wrapper for mail.tm"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/prtolem/MailTM"
+"Bug Tracker" = "https://github.com/prtolem/MailTM/issues"
