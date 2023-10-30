@@ -60,15 +60,13 @@ class OneMessage(BaseModel):
     subject: str
     flagged: bool
     isDeleted: bool
-    verifications: list[str]
-    # FIX verifications: dict
+    verifications: dict
     retention: bool
     retentionDate: str
     text: str
     html: list[str]
     hasAttachments: bool
-    attachments: list[Attachment]
-    # FIX attachments: Optional[list[Attachment]] = None
+    attachments: Optional[list[Attachment]] = None
     size: int
     downloadUrl: str
     createdAt: str
