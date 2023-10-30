@@ -10,4 +10,5 @@ setup(name='mailtmapi',
       install_requires=[
             'aiohttp==3.8.1'
             'pydantic==1.10.2',
+            'typing=3.7.4.3'
       ])
